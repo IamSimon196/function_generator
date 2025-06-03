@@ -40,17 +40,22 @@ while True:
     integral = integral.subs(sp.log(x), sp.Symbol("ln(x)"))
 
     # Zobrazení výsledků
-    print("\n--------------------")
-    sp.pprint(funkce, use_unicode=True)
+    print("\n" + "-"*50)
+    print()
+    sp.pprint(funkce, use_unicode=True, num_columns=300)
+    print()
 
     input("Stiskni Enter pro zobrazení derivace a integrálu...")
 
     print("\nDerivace:")
-    sp.pprint(sp.simplify(derivace), use_unicode=True)
+    print()
+    sp.pprint(sp.simplify(derivace), use_unicode=True,num_columns=300)
+    print()
 
     print("\nIntegrál:")
-    sp.pprint(sp.simplify(integral), use_unicode=True)
+    print()
+    sp.pprint(sp.simplify(integral), use_unicode=True, num_columns=300)
+    print()
     print("+ C")
 
     input("\nStiskni Enter pro novou funkci nebo zavři program pro ukončení...")
-
